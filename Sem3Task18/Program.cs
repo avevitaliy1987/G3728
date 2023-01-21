@@ -2,62 +2,25 @@
 //Напишите программу, которая по заданному номеру четверти, 
 //показывает диапазон возможных координат точек в этой четверти (x и y).
 
-int Num = ReadData("Введите номер четверти");
-PrintQuterTest(coordx,coordy);
+int qNum = ReadData("Введите номер четверти");
+PrintQuterAnswer(qNum);
 
-// Метод читает данные от пользователя
+//Метод читает данные от пользователя
 int ReadData(string msg)
 {
     Console.WriteLine(msg);
-    return int.Parse(Console.ReadLine()??"0");
-}
-// Метод определяет четверть по координатам точки
-void PrintQuterTest(int Num)
-{
-    if (Num == 1)(coordx > 0 && coordy > 0) Console.WriteLine(coordx > 0 && coordy > 0)
-    if(Num == 2)(coordx > 0 && coordy < 0) Console.WriteLine(coordx > 0 && coordy < 0)
-    if(Num == 3)(coordx < 0 && coordy < 0) Console.WriteLine(
-    if(Num == 4)(coordx < 0 && coordy > 0) Console.WriteLine
+    return int.Parse(Console.ReadLine() ?? "0");
 }
 
-
-
-
-if(Num == 1)
+// Метод определяет допустимого диапазона координат точек по четверти
+void PrintQuterAnswer(int num)
 {
-    Console.WriteLine(" x > 0, y > 0");
-}
-
-if(Num == 1)
-{
-    Console.WriteLine(" x > 0, y > 0");
-}
-
-if(Num == 1)
-{
-    Console.WriteLine(" x > 0, y > 0");
-}
-
-if(Num == 1)
-{
-    Console.WriteLine(" x > 0, y > 0");
-}
-
-
-
-
-// Метод читает данные от пользователя
-int ReadData(string msg)
-{
-    Console.WriteLine(msg);
-    return int.Parse(Console.ReadLine()??"0");
-}
-
-// Метод определяет четверть по координатам точки
-void PrintQuterTest()
-{
-    if(coordx > 0 && coordy > 0) Console.WriteLine("Точка в четверти 1 ");
-    if(coordx > 0 && coordy < 0) Console.WriteLine("Точка в четверти 2 ");
-    if(coordx < 0 && coordy < 0) Console.WriteLine("Точка в четверти 3 ");
-    if(coordx < 0 && coordy > 0) Console.WriteLine("Точка в четверти 4 ");
+    if (num > 0 && num < 5)
+    {
+        if (num == 1) Console.WriteLine("X > 0, Y > 0");
+        if (num == 2) Console.WriteLine("X > 0, Y < 0");
+        if (num == 3) Console.WriteLine("X < 0, Y < 0");
+        if (num == 4) Console.WriteLine("X < 0, Y > 0");
+    }
+    else Console.WriteLine("Вы ввели не номер четверти!");
 }
