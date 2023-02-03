@@ -13,12 +13,12 @@ void PrintData(string res)
     Console.WriteLine(res);
 }
 
-int[] Gen1DArray(int len, int minValue, int maxValue)
+int[] Gen1DArray(int len)
 {
     int[] arr = new int[len];
     for (int i = 0; i < arr.Length; i++)
     {
-        arr[i] = new Random().Next(minValue, maxValue + 1);
+        arr[i] = new Random().Next(arr>99 && arr<1000);
     }
     return arr;
 }
