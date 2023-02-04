@@ -3,8 +3,6 @@
 //минимальным элементов массива.
 
 
-
-
 int ReadData(string msg)
 {
     Console.WriteLine(msg);
