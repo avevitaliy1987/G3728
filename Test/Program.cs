@@ -222,22 +222,24 @@
 
 // ---------------Рекурсия перебор всех вариантов из заданных симоволов----------------
 
-int n = 1;
+// int n = 1;
 
-void FindWords (string alphabet, char[] word, int lenght = 0)
-{
-    if (lenght == word.Length)
-    {
-        Console.WriteLine($"{n++} {new String(word)}"); return;
-    }
+// void FindWords (string alphabet, char[] word, int lenght = 0)
+// {
+//     if (lenght == word.Length)
+//     {
+//         Console.WriteLine($"{n++} {new String(word)}"); return;
+//     }
 
-    for (int i = 0; i < alphabet.Length; i++)
+//     for (int i = 0; i < alphabet.Length; i++)
 
-    {
-    word[lenght] = alphabet[i];
-    FindWords(alphabet, word, lenght +1);
+//     {
+//     word[lenght] = alphabet[i];
+//     FindWords(alphabet, word, lenght +1);
 
-    }
-}
+//     }
+// }
 
-FindWords ("фисв", new char[5]);
+// FindWords ("фисв", new char[5]);
+
+ 
